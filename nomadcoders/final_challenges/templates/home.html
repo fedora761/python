@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Job Scrapper</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <!-- pico 링크 -->
+  <!-- 구글 폰트 링크 추가 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Lora:ital,wght@1,700&family=Righteous&display=swap" rel="stylesheet">
+  <!-- 추가한 구글 폰트를 CSS rules로 적용 -->
+  <style>
+    body {
+      font-family: 'Archivo', sans-serif;
+        /* 백그라운드 이미지 설정 */
+      background-image: url('./static/img/back_img12.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0; /* 바디의 기본 마진 제거 */
+      padding: 0; /* 바디의 기본 패딩 제거 */
+      height: 100vh; /* 뷰포트 높이를 100%로 설정하여 전체 화면으로 확장 */
+    }
+  
+    /* 스팬 요소에 배경과 글꼴 색상 추가 */
+    #saramin, #jobplanet, #nomad {
+      background-color: #F2F2F2; /* 배경색 설정 */
+      color: #333; /* 글꼴 색상 설정 */
+      padding: 5px 10px; /* 내용 주변의 여백 설정 */
+      border-radius: 4px; /* 모서리 둥글게 만듦 */
+    }
+  
+    .custom-input::placeholder {
+    color: #505050; 
+    }
+
+    .custom-input {
+      border: 1px solid #505050; /* 입력란 테두리 스타일 설정 */
+      padding: 5px; /* 입력란 안쪽 여백 설정 */
+    }
+
+    .custom-button {
+      background-color: #FFFFFF; 
+      color: #000000; /* 버튼 텍스트 색상 설정 */
+      padding: 10px 20px; /* 버튼 안쪽 여백 설정 */
+      border: none; /* 버튼 테두리 제거 */
+      cursor: pointer; /* 커서 스타일 변경 */
+    }
+    .custom-text{
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+ <main class="container">
+ <h1 style="font-family: 'Righteous', cursive;">Hello👋 Job Scrapper</h1>
+    <h2 style="font-family: 'Righteous', cursive;">What job do you want?</h2>
+    <form action="/search">
+      <input type="text" name="keyword" placeholder="Write one Keyword please" class="custom-input" />
+      <button class="custom-button">Search</button>
+  </form>
+  <P style="font-family: 'Righteous', cursive;" class="custom-text">
+     Another job site 👍    
+     <span id="saramin">Saramin🤦‍♂️</span>
+     <span id="jobplanet">Jobplanet🤦‍♀️</span>
+   </P>
+   <P style="font-family: 'Righteous', cursive;" class="custom-text">
+     If you want to study Python🐍    
+     <span id="nomad">nomadcoders😎</span>
+   </P>
+   <script>
+     // JavaScript 코드를 사용하여 링크 클릭 이벤트 처리
+     document.getElementById("saramin").onclick = function() {
+       location.href = 'https://www.saramin.co.kr/';
+     };
+     document.getElementById("jobplanet").onclick = function() {
+       location.href = 'https://www.jobplanet.co.kr/';
+     };
+    document.getElementById("nomad").onclick = function() {
+       location.href = 'https://nomadcoders.co/';
+     };
+   </script>
+</body>
+</html>
+

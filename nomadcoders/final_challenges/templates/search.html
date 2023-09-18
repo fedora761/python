@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Scrapper</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <!--pico link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Lora:ital,wght@1,700&family=Righteous&display=swap" rel="stylesheet">
+  <!-- 추가한 구글 폰트를 CSS rules로 적용 -->
+  <style>
+    body {
+      font-family: 'Archivo', sans-serif;
+        /* 백그라운드 이미지 설정 */
+      background-image: url('./static/img/back_img13.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    a {
+      color: #313231; /* 원하는 색상으로 변경 */
+      text-decoration: none; /* 밑줄 제거 */
+    }
+  
+    table {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+  </style>
+  
+</head>
+
+  
+<body>
+ <main class="container">
+      <hgroup>
+        <h1>Search Results for "{{keyword}}":</h1>
+        <a target="_blank" href="/export?keyword={{keyword}}">
+          <img src="./static/img/back_img16.png"alt="Export to file">
+        Export to file
+        </a>
+      </hgroup>
+      <table role="grid">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for job in jobs %}
+              <tr>
+                <td>{{job.position}}</td>
+                <td>{{job.company}}</td>
+                <td>{{job.location}}</td>
+                <td><a href="{{job.link}}" target="_blank">Click📌</a></tdn>
+              </tr>
+            {% endfor %} 
+        </tbody>
+      </table>
+ 
+</body>
+</html>
