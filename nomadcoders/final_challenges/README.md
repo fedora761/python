@@ -10,19 +10,20 @@ repl 에서 실행
 
 2. 폴더구조  
 
-FILE
-extractors
-ㄴㄴ rmw.py
-ㄴㄴ wwr.py
-static
-ㄴㄴ back_img12.jpg
-ㄴㄴ back_img13.jpg
-ㄴㄴ back_img16.jpg
-templates
-ㄴㄴ home.html
-ㄴㄴ search.html
-ㄴ main.py
-ㄴ file.py
+nomadcoders
+ ┣ file
+ ┃ ┣ extractors
+ ┃ ┃ ┣ rmw.py
+ ┃ ┃ ┗ wwr.py
+ ┃ ┣ static
+ ┃ ┃ ┣ back_img12.jpg
+ ┃ ┃ ┣ back_img13.jpg
+ ┃ ┃ ┗ back_img16.png
+ ┃ ┣ templates
+ ┃ ┃ ┣ home.html
+ ┃ ┃ ┗ search.html
+ ┃ ┣ file.py
+ ┃ ┗ main.py
 
 3. 파일 설명
 - main.py 에서 templates 폴더의 home.html, search.html 호춯
